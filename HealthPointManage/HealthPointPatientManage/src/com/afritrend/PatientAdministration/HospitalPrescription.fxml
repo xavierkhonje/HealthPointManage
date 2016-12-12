@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="589.0" prefWidth="799.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.afritrend.PatientAdministration.HospitalPrescriptionController">
+    <stylesheets>
+        <URL value="@/Resources/patientmain.css" />
+    </stylesheets>
+   <children>
+      <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <AnchorPane id="PrescriptionPane" prefHeight="391.0" prefWidth="799.0">
+               <children>
+                  <Label layoutX="55.0" layoutY="40.0" text="Class" />
+                  <Label layoutX="55.0" layoutY="77.0" text="Dosage Form" />
+                  <Label layoutX="55.0" layoutY="107.0" text="Drug Name" />
+                  <Label layoutX="54.0" layoutY="142.0" text="Strength" />
+                  <Label layoutX="54.0" layoutY="174.0" text="Indication" />
+                  <Label layoutX="55.0" layoutY="205.0" text="Duration" />
+                  <Label layoutX="55.0" layoutY="240.0" text="Plan on Submission" />
+                  <Label layoutX="54.0" layoutY="269.0" text="Chatered ?" />
+                  <Label layoutX="439.0" layoutY="44.0" text="Dose" />
+                  <Label layoutX="439.0" layoutY="85.0" text="Route" />
+                  <Label layoutX="439.0" layoutY="117.0" text="Frequency" />
+                  <Label layoutX="439.0" layoutY="156.0" text="Quantity" />
+                  <Label layoutX="439.0" layoutY="200.0" text="Comment" />
+                  <ComboBox fx:id="cbDosageForm" layoutX="183.0" layoutY="71.0" onAction="#ShowDrugs" prefHeight="25.0" prefWidth="177.0" promptText="Dosage Form" />
+                  <ComboBox fx:id="cbDrugName" layoutX="183.0" layoutY="103.0" onAction="#ShowStrengths" prefHeight="25.0" prefWidth="177.0" promptText="Drug Name" />
+                  <ComboBox fx:id="cbStrength" layoutX="183.0" layoutY="138.0" prefHeight="25.0" prefWidth="177.0" promptText="Strength" />
+                  <ComboBox fx:id="cbIndication" layoutX="183.0" layoutY="170.0" prefHeight="25.0" prefWidth="177.0" promptText="Indication" />
+                  <TextField fx:id="cbDuration" layoutX="183.0" layoutY="201.0" prefHeight="25.0" prefWidth="177.0" promptText="Duration (Days)" />
+                  <ComboBox fx:id="cbPlanOnSubmission" layoutX="183.0" layoutY="236.0" prefHeight="25.0" prefWidth="177.0" promptText="Plan on Submission" />
+                  <ComboBox fx:id="cbChartered" layoutX="183.0" layoutY="265.0" prefHeight="25.0" prefWidth="177.0" promptText="Chartered" />
+                  <TextField fx:id="txtDose" layoutX="588.0" layoutY="36.0" prefHeight="25.0" prefWidth="177.0" promptText="Dose" />
+                  <TextField fx:id="txtRoute" layoutX="588.0" layoutY="76.0" prefHeight="25.0" prefWidth="177.0" promptText="Route" />
+                  <ComboBox fx:id="cbFrequency" layoutX="588.0" layoutY="109.0" prefHeight="25.0" prefWidth="177.0" promptText="Frequency" />
+                  <TextField fx:id="txtComment" layoutX="588.0" layoutY="180.0" prefHeight="25.0" prefWidth="177.0" promptText="Comment" />
+                  <DatePicker fx:id="dpstartdate" layoutX="588.0" layoutY="224.0" prefHeight="25.0" prefWidth="177.0" promptText="Start Date" />
+                  <DatePicker fx:id="dpstopdate" layoutX="588.0" layoutY="262.0" prefHeight="25.0" prefWidth="177.0" promptText="Stop Date" />
+                  <TextField fx:id="txtQuantity" layoutX="588.0" layoutY="148.0" prefHeight="25.0" prefWidth="177.0" promptText="Quantity" />
+                  <ComboBox fx:id="cbclass" layoutX="183.0" layoutY="36.0" onAction="#ShowDosageForms" prefHeight="25.0" prefWidth="177.0" promptText="Class" />
+                  <Label layoutX="439.0" layoutY="228.0" text="Start Date" />
+                  <Label layoutX="439.0" layoutY="266.0" text="Stop Date" />
+                  <Button fx:id="btnSavePrescription" layoutX="183.0" layoutY="316.0" mnemonicParsing="false" onAction="#SavePrescription" prefHeight="25.0" prefWidth="177.0" text="Save Prescription" />
+               </children>
+            </AnchorPane>
+            <TableView prefHeight="205.0" prefWidth="599.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

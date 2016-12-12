@@ -1,0 +1,35 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+#SearchBox
+{
+
+    -fx-background-radius: 60;
+}
+
+#MnuMenu
+{
+    -fx-background-color: #cbdad9;    
+}
+
+#HBox
+{
+    -fx-background-color: #cbdad9; 
+}
+
+#Accordion
+{
+    -fx-background-color: #cbdad9;
+    -fx-background-image:url('left_pane_Texture.png');
+    -fx-background-repeat: repeat-y;
+}
+
+#MainStage
+{
+  
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.afritrend.PatientController.EditPatientController">
+    <stylesheets>
+        <URL value="@/Resources/patientmain.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="lblid" layoutX="57.0" layoutY="46.0" text="Patient ID" />
+      <TextField fx:id="txtPatientID" layoutX="151.0" layoutY="42.0" prefHeight="25.0" prefWidth="260.0" promptText="PatientID" />
+      <Button fx:id="btnPatientID" layoutX="151.0" layoutY="93.0" mnemonicParsing="false" text="Update Patient" />
+   </children>
+</AnchorPane>

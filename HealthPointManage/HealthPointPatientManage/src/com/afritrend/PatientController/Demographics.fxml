@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="438.0" prefWidth="672.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.afritrend.PatientController.DemographicsController">
+    <stylesheets>
+        <URL value="@/Resources/patientmain.css" />
+    </stylesheets>
+   <children>
+      <Button fx:id="SaveDemographics" layoutX="36.0" layoutY="253.0" mnemonicParsing="false" onAction="#SaveDemographics" prefHeight="25.0" prefWidth="135.0" text="Save Demographics" />
+      <Label layoutX="36.0" layoutY="26.0" text="Date of Birth" />
+      <Label layoutX="36.0" layoutY="54.0" text="Age" />
+      <Label layoutX="36.0" layoutY="83.0" text="Date of Admission" />
+      <Label layoutX="36.0" layoutY="110.0" text="Weight" />
+      <Label layoutX="36.0" layoutY="140.0" text="Gender" />
+      <Label layoutX="36.0" layoutY="170.0" text="Culture Assessment" />
+      <Label layoutX="36.0" layoutY="201.0" text="Culture Results" />
+      <DatePicker fx:id="DateofBirth" layoutX="205.0" layoutY="22.0" prefHeight="25.0" prefWidth="240.0" promptText="Date Of Birth" />
+      <TextField fx:id="Age" layoutX="205.0" layoutY="50.0" prefHeight="25.0" prefWidth="240.0" promptText="Age" />
+      <DatePicker fx:id="DateOfAdmission" layoutX="205.0" layoutY="79.0" prefHeight="25.0" prefWidth="240.0" promptText="Date Of Admission" />
+      <TextField fx:id="Weight" layoutX="205.0" layoutY="106.0" prefHeight="25.0" prefWidth="240.0" promptText="Weight" />
+      <ComboBox fx:id="Gender" layoutX="205.0" layoutY="136.0" prefHeight="25.0" prefWidth="240.0" promptText="Gender" />
+      <ComboBox fx:id="CultureAssessment" layoutX="205.0" layoutY="166.0" prefHeight="25.0" prefWidth="240.0" promptText="Culture Assessment" />
+      <ComboBox fx:id="CultureResults" layoutX="205.0" layoutY="197.0" prefHeight="25.0" prefWidth="240.0" promptText="Culture results" />
+      <Button layoutX="36.0" layoutY="293.0" mnemonicParsing="false" text="Update Demographics" />
+   </children>
+</AnchorPane>

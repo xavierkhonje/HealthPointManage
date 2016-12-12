@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="MainBorderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../../../Resources/patientmain.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.afritrend.PatientController.PatientMainController">
+   <left>
+      <Accordion BorderPane.alignment="CENTER" id="Accordion">
+        <panes>
+          <TitledPane animated="false" text="Shortcuts">
+            <content>
+              <AnchorPane id="Accordion" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Windows">
+            <content>
+              <AnchorPane id="Accordion" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" text="Allergies">
+              <content>
+                <AnchorPane id="Accordion" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox maxWidth="1.7976931348623157E308" prefHeight="101.0" prefWidth="201.0">
+                           <children>
+                              <ComboBox editable="true" fx:id="cbAllergies" maxWidth="1.7976931348623157E308" promptText="Allergies" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Save Allergies" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Source">
+              <content>
+                <AnchorPane id="Accordion" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox maxWidth="1.7976931348623157E308" prefHeight="101.0" prefWidth="201.0">
+                           <children>
+                              <ComboBox fx:id="cbSource" editable="true" maxWidth="1.7976931348623157E308" promptText="Source" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Save Source" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Diagnosis">
+              <content>
+                <AnchorPane id="Accordion" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox maxWidth="1.7976931348623157E308" prefHeight="101.0" prefWidth="201.0">
+                           <children>
+                              <ComboBox fx:id="cbDiagnosis" editable="true" maxWidth="1.7976931348623157E308" promptText="Diagnosis" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Save Diagnosis" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Cormobidities">
+              <content>
+                <AnchorPane id="Accordion" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="CormobiditiesVBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="190.0" prefWidth="201.0">
+                           <children>
+                              <ComboBox fx:id="cbCormobidity" id="cormobidity" editable="true" maxWidth="1.7976931348623157E308" promptText="CORMOBIDITY" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Button fx:id="btnCormobidity" onAction="#SavePatient_has_Cormobidity"  maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Save Cormobidity" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets left="5.0" right="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+   </left>
+   <center>
+      <AnchorPane id="MainStage" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <ProgressBar maxWidth="1.7976931348623157E308" progress="0.0" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ProgressBar>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <HBox BorderPane.alignment="CENTER" id="HBox">
+         <children>
+      <MenuBar id="MnuMenu" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER" HBox.hgrow="ALWAYS">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="MnuNewPatient" mnemonicParsing="false" onAction="#NewPatient" text="New Patient" />
+                  <MenuItem fx:id="MnuAdmitPatient" mnemonicParsing="false" onAction="#AdmitPatient" text="Admit Patient" />
+                  <MenuItem fx:id="MnuDischargePatient" mnemonicParsing="false" onAction="#DischargePatient" text="Discharge Patient" />
+              <MenuItem fx:id="MnuLogout" mnemonicParsing="false" onAction="#Logout" text="Logout" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="View">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Patients" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Patient">
+              <items>
+                  <Menu mnemonicParsing="false" text="Prescription">
+                    <items>
+                      <MenuItem fx:id="MnuHomeMedication" mnemonicParsing="false" onAction="#HomeMedication" text="Home Medication" />
+                        <MenuItem fx:id="MnuHspPrescribe" mnemonicParsing="false" onAction="#HospitalPrescription" text="Hospital Prescription" />
+                        <MenuItem fx:id="MnuSpecialAntimicrobial" mnemonicParsing="false" onAction="#SpecialAntimicrobials" text="Special Antimicrobials" />
+                    </items>
+                  </Menu>
+                  <MenuItem fx:id="MnuAdministration" mnemonicParsing="false" onAction="#Administration" text="Administration" />
+                  <MenuItem fx:id="MnuTTO" mnemonicParsing="false" onAction="#TTO" text="TTO" />
+                  <MenuItem id="Demographicsmnu" fx:id="MnuDemographics" mnemonicParsing="false" onAction="#ShowDemographics" text="Demographics" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Drugs">
+              <items>
+                <MenuItem fx:id="MnuDrugs" mnemonicParsing="false" onAction="#DrugEntry" text="Enter Drugs" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Reports">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Window">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+        <TextField id="SearchBox" promptText="SEARCH" HBox.hgrow="NEVER">
+           <HBox.margin>
+              <Insets left="10.0" right="10.0" />
+           </HBox.margin>
+        </TextField>            
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
